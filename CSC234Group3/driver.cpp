@@ -306,14 +306,19 @@ void doublyLinkedList<Type>::copyList(const doublyLinkedList<Type>& otherList)
 template<class Type>
 doublyLinkedList<Type>::doublyLinkedList(const doublyLinkedList<Type>& otherList)
 {
-    //ENTER CODE HERE (20%)
+    first = NULL;
+    copyList(otherList);
 }
 
 template<class Type>
 const doublyLinkedList<Type>& doublyLinkedList<Type>::operator=
 (const doublyLinkedList<Type>& otherList)
 {
-    //ENTER CODE HERE (20%)
+    if (this != &otherList) 
+    {
+        copyList(otherList);
+    }
+     return *this; 
 }
 
 template <class Type>
